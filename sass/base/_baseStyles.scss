@@ -1,0 +1,34 @@
+/* Утилиты */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+/* Общие значания */
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+body {
+  color: $general-text-color;
+
+  font-family: $general-font;
+  letter-spacing: 0.03em;
+}
+li {
+  list-style-type: none;
+}

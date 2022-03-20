@@ -1,0 +1,88 @@
+.team {
+  background-color: $secondaru-color-bcg;
+
+  &__list {
+    display: flex;
+    margin-top: 50px;
+  }
+
+  &__wrap {
+    padding: 30px 0;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.2;
+    text-align: center;
+
+    color: $title-color;
+  }
+
+  &__title-name {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+
+    color: $title-color;
+  }
+
+  &__text {
+    margin-top: 10px;
+
+    font-size: 16px;
+    line-height: 1.2;
+    text-align: center;
+  }
+
+  &__contacts-list {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+}
+
+.team__item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+  background-color: $team-card-bcg;
+
+  &:nth-child(n + 2) {
+    margin-left: 30px;
+  }
+}
+
+.team__contacts-item:not(first-child) {
+  margin-left: 10px;
+}
+
+.team__contacts-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 44px;
+  height: 44px;
+
+  border-radius: 50%;
+
+  @include transition(background-color);
+  &:hover,
+  &:focus {
+    @include transition(background-color);
+    background-color: $accent-color;
+  }
+}
+
+.team__contacts-icon {
+  fill: $svg-general-color;
+  @include transition(fill);
+
+  .team__contacts-link:hover &,
+  .team__contacts-link:focus & {
+    @include transition(fill);
+    fill: $svg-accent-color-white;
+  }
+}

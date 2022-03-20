@@ -1,0 +1,41 @@
+.footer {
+  padding: 60px 0px;
+
+  background-color: $footer-hero-color-bcg;
+
+  &__wrap {
+    display: flex;
+  }
+}
+
+.footer__link {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 1.7;
+  font-style: normal;
+
+  color: $opacity-color-txt;
+  text-decoration: none;
+  @include transition(color);
+
+  &:hover,
+  &:focus {
+    color: $accent-color;
+    @include transition(color);
+  }
+}
+
+.footer__link--colorHover {
+  margin-top: 20px;
+
+  font-size: 14px;
+  line-height: 1.7;
+  font-style: normal;
+
+  color: $secondary-title-color;
+}
+
+.footer__item + .footer__item {
+  margin-top: 9px;
+}
