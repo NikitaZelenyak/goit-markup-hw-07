@@ -12,15 +12,15 @@ ul {
 }
 /* Общие значания */
 .container {
-  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
 }
+
 .section {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 body {
@@ -31,4 +31,28 @@ body {
 }
 li {
   list-style-type: none;
+}
+img {
+  max-width: 100%;
+}
+@media screen and (min-width: $mobile) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: $desctop) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .container {
+    width: 1200px;
+  }
 }

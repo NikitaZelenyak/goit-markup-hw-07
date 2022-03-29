@@ -1,11 +1,6 @@
 .team {
   background-color: $secondaru-color-bcg;
 
-  &__list {
-    display: flex;
-    margin-top: 50px;
-  }
-
   &__wrap {
     padding: 30px 0;
   }
@@ -48,10 +43,6 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
   background-color: $team-card-bcg;
-
-  &:nth-child(n + 2) {
-    margin-left: 30px;
-  }
 }
 
 .team__contacts-item:not(first-child) {
@@ -84,5 +75,41 @@
   .team__contacts-link:focus & {
     @include transition(fill);
     fill: $svg-accent-color-white;
+  }
+}
+@media screen and (max-width: 767px) {
+  .team {
+    &__item {
+      display: block;
+      margin-top: 30px;
+      max-width: 450px;
+    }
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .team {
+    &__list {
+      display: flex;
+      margin: -15px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+    &__item {
+      margin: 15px;
+      width: calc((100% - 2 * 30px) / 2);
+    }
+  }
+}
+
+@media screen and (min-width: $desctop) {
+  .team {
+    &__list {
+      flex-wrap: nowrap;
+    }
+
+    &__item {
+      width: 270px;
+    }
   }
 }

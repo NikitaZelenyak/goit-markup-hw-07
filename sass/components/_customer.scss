@@ -7,15 +7,6 @@
 
     color: $title-color;
   }
-
-  &__list {
-    display: flex;
-    margin-top: 50px;
-  }
-
-  &__item:not(:first-child) {
-    margin-left: 30px;
-  }
 }
 
 .customer__link {
@@ -45,5 +36,63 @@
   .customer__link:hover & {
     @include transition(fill);
     fill: $accent-color;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .customer {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+      margin-top: 30px;
+    }
+    &__item {
+      margin: 15px;
+      width: calc((100% - 4 * 15px) / 2);
+    }
+    &__link {
+      width: 210px;
+    }
+  }
+}
+
+@media screen and (min-width: $laptop) {
+  .customer {
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+      margin: -15px;
+      margin-top: 30px;
+    }
+    &__item {
+      margin: 15px;
+      width: calc((100% - 6 * 15px) / 3);
+    }
+    &__link {
+      width: 226px;
+    }
+  }
+}
+
+@media screen and (min-width: $desctop) {
+  .customer {
+    &__list {
+      display: flex;
+      margin: 0px;
+      margin-top: 50px;
+      flex-wrap: nowrap;
+    }
+    &__item {
+      margin: 0;
+    }
+
+    &__item:not(:first-child) {
+      margin-left: 30px;
+    }
+
+    &__link {
+      width: 170px;
+    }
   }
 }

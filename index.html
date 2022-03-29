@@ -20,61 +20,88 @@
   <body>
     <!-- Шапка сайта -->
     <header class="page-header">
-      <div class="container page-header__wrap">
-        <nav class="page-header__nav">
-          <a class="logo logo--white" href="./index.html"
-            ><span class="logo__text-accent">Web</span>Studio</a
-          >
+      <div class="container">
+        <a class="logo logo--white" href="./index.html"
+          ><span class="logo__text-accent">Web</span>Studio</a
+        >
 
-          <ul class="page-header__list">
-            <li class="page-header__item">
-              <a
-                class="page-header__link page-header__link--current"
-                href="./index.html"
-                >Студия</a
+        <div class="page-header__wrap">
+          <nav class="page-header__nav">
+            <ul class="page-header__list">
+              <li class="page-header__item">
+                <a
+                  class="page-header__link page-header__link--current"
+                  href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="page-header__item">
+                <a class="page-header__link" href="./portofolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="page-header__item">
+                <a class="page-header__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="auth-nav">
+            <li class="auth-nav__item">
+              <a class="auth-nav__link" href="mailto:info@devstudio.com">
+                <svg class="auth-nav__icon" width="16px" height="12px">
+                  <use href="./image/icons.svg#letter"></use>
+                </svg>
+                info@devstudio.com</a
               >
             </li>
-            <li class="page-header__item">
-              <a class="page-header__link" href="./portofolio.html"
-                >Портфолио</a
+
+            <li class="auth-nav__item">
+              <a class="auth-nav__link" href="tel:+380961111111">
+                <svg class="auth-nav__icon" width="10px" height="16px">
+                  <use href="./image/icons.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
               >
-            </li>
-            <li class="page-header__item">
-              <a class="page-header__link" href="">Контакты</a>
             </li>
           </ul>
-        </nav>
-        <ul class="auth-nav">
-          <li class="auth-nav__item">
-            <a class="auth-nav__link" href="mailto:info@devstudio.com">
-              <svg class="auth-nav__icon" width="16px" height="12px">
-                <use href="./image/icons.svg#letter"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
+          <ul class="networks networks__list">
+            <li class="networks__item">
+              <a class="networks__link" href=""></a>
+            </li>
+            <li class="networks__item">
+              <a class="networks__link" href=""></a>
+            </li>
+            <li class="networks__item">
+              <a class="networks__link" href=""></a>
+            </li>
+            <li class="networks__item">
+              <a class="networks__link" href=""></a>
+            </li>
+          </ul>
+          <button class="menu-close-button">
+            <svg width="40" height="40px">
+              <use href="./image/icons.svg#close-menu"></use>
+            </svg>
+          </button>
+        </div>
 
-          <li class="auth-nav__item">
-            <a class="auth-nav__link" href="tel:+380961111111">
-              <svg class="auth-nav__icon" width="10px" height="16px">
-                <use href="./image/icons.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        <button class="menu-open-button">
+          <svg width="40" height="40px">
+            <use href="./image/icons.svg#menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
       <!-- Герой -->
-      <section class="hero section overlay">
+      <!-- <section class="hero section overlay">
         <div class="container">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
           <button class="hero__button" type="button" data-modal-open>
             Заказать услугу
           </button>
         </div>
-      </section>
+      </section> -->
 
       <!-- модалка -->
 
@@ -149,7 +176,7 @@
                 </svg>
               </div>
               <h3 class="feature__title">Внимание к деталям</h3>
-              <p class="feature__tetxt">
+              <p class="feature__text">
                 Идейные соображения, а также начало повседневной работы по
                 формированию позиции.
               </p>
@@ -158,11 +185,11 @@
             <li class="feature__item">
               <div class="feature__wrap">
                 <svg class="feature__icon" width="70" height="70">
-                  <use href="./image/icons.svg#time"></use>
+                  <use href="./image/icons.svg#clock"></use>
                 </svg>
               </div>
               <h3 class="feature__title">Пунктуальность</h3>
-              <p class="feature__tetxt">
+              <p class="feature__text">
                 Задача организации, в особенности же рамки и место обучения
                 кадров влечет за собой.
               </p>
@@ -174,7 +201,7 @@
                 </svg>
               </div>
               <h3 class="feature__title">Планирование</h3>
-              <p class="feature__tetxt">
+              <p class="feature__text">
                 Равным образом консультация с широким активом в значительной
                 степени обуславливает.
               </p>
@@ -186,7 +213,7 @@
                 </svg>
               </div>
               <h3 class="feature__title">Современные технологии</h3>
-              <p class="feature__tetxt">
+              <p class="feature__text">
                 Значимость этих проблем настолько очевидна, что реализация
                 плановых заданий.
               </p>
@@ -194,7 +221,9 @@
           </ul>
         </div>
       </section>
+
       <!-- Фото занятий компании -->
+
       <section class="example section">
         <div class="container">
           <h2 class="example__title">Чем мы занимаемся</h2>
@@ -238,7 +267,9 @@
           </ul>
         </div>
       </section>
+
       <!-- команда компании -->
+
       <section class="team section">
         <div class="container">
           <h2 class="team__title">Наша команда</h2>
@@ -478,49 +509,51 @@
           </ul>
         </div>
       </section>
+
       <!-- постоянные клиенты -->
+
       <section class="customer section">
         <div class="container">
           <h2 class="customer__title">Постоянные клиенты</h2>
           <ul class="customer__list">
             <li class="customer__item">
               <a class="customer__link">
-                <svg class="customer__icon" width="41" height="47">
+                <svg class="customer__icon" width="106" height="60">
                   <use href="./image/icons.svg#yaco"></use>
                 </svg>
               </a>
             </li>
             <li class="customer__item">
               <a class="customer__link" href="">
-                <svg class="customer__icon" width="40" height="52">
+                <svg class="customer__icon" width="106" height="60">
                   <use href="./image/icons.svg#company"></use>
                 </svg>
               </a>
             </li>
             <li class="customer__item">
               <a class="customer__link" href="">
-                <svg class="customer__icon" width="43" height="41">
+                <svg class="customer__icon" width="106" height="60">
                   <use href="./image/icons.svg#company2"></use>
                 </svg>
               </a>
             </li>
             <li class="customer__item">
               <a class="customer__link" href="">
-                <svg class="customer__icon" width="85" height="65">
+                <svg class="customer__icon" width="106" height="60">
                   <use href="./image/icons.svg#foster-peters"></use>
                 </svg>
               </a>
             </li>
             <li class="customer__item">
               <a class="customer__link" href="">
-                <svg class="customer__icon" width="63" height="46">
+                <svg class="customer__icon" width="106" height="60">
                   <use href="./image/icons.svg#brand"></use>
                 </svg>
               </a>
             </li>
             <li class="customer__item">
               <a class="customer__link" href="">
-                <svg class="customer__icon" width="94" height="65">
+                <svg class="customer__icon" width="106" height="60">
                   <use href="./image/icons.svg#tegline"></use>
                 </svg>
               </a>
@@ -529,6 +562,7 @@
         </div>
       </section>
     </main>
+
     <!-- Подвал -->
 
     <footer class="footer section">

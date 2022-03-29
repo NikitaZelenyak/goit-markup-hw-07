@@ -1,24 +1,5 @@
 .page-header {
-  border: 1px solid #ececec;
-  &__nav {
-    display: flex;
-    align-items: center;
-  }
-
-  &__wrap {
-    display: flex;
-    align-items: center;
-  }
-  &__list {
-    display: flex;
-    align-items: center;
-  }
-  &__item:nth-child(1) {
-    margin-left: 93px;
-  }
-  &__item:nth-child(n + 2) {
-    margin-left: 50px;
-  }
+  border-bottom: 1px solid #ececec;
 }
 .page-header__link {
   position: relative;
@@ -55,5 +36,110 @@
     width: 100%;
     background-color: $accent-color;
     border-radius: 2px;
+  }
+}
+
+.auth-nav__link {
+  font-weight: 500;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+
+  color: $general-text-color;
+  text-decoration: none;
+
+  @include transition(color);
+
+  &:focus,
+  &:hover {
+    color: $accent-color;
+    @include transition(color);
+  }
+
+  &:focus .auth-nav__icon,
+  &:hover .auth-nav__icon {
+    fill: $accent-color;
+    @include transition(fill);
+  }
+}
+
+.auth-nav__icon {
+  @include transition(fill);
+  fill: $general-text-color;
+}
+.menu-close-button,
+.menu-open-button {
+  display: none;
+}
+
+@media screen and (max-width: 767px) {
+  .menu-close-button,
+  .menu-open-button {
+    display: block;
+    border: none;
+    background-color: transparent;
+  }
+
+  .page-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .page-header__wrap {
+    display: none;
+  }
+}
+@media screen and (min-width: $laptop) {
+  .page-header .container {
+    display: flex;
+    align-items: center;
+  }
+  .page-header__wrap {
+    display: flex;
+    align-items: center;
+  }
+  .page-header__list {
+    display: flex;
+    align-items: center;
+    margin-left: 88px;
+  }
+
+  .page-header__item:nth-child(n + 2) {
+    margin-left: 50px;
+  }
+
+  .auth-nav {
+    margin-left: 84px;
+
+    &__link {
+      font-size: 12px;
+      display: flex;
+    }
+    &__item + &__item {
+      margin-top: 10px;
+    }
+    &__icon {
+      margin-right: 8px;
+    }
+  }
+}
+
+@media screen and (min-width: $desctop) {
+  .auth-nav {
+    display: flex;
+    align-items: center;
+    margin-left: 305px;
+
+    &__item {
+      display: flex;
+      align-items: center;
+
+      & + & {
+        margin-top: 0px;
+      }
+    }
+    &__item:nth-child(n + 2) {
+      margin-left: 30px;
+    }
   }
 }
