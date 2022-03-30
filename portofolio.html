@@ -18,47 +18,76 @@
   <body>
     <!-- Шапка сайта -->
     <header class="page-header">
-      <div class="container page-header__wrap">
-        <nav class="page-header__nav">
-          <a class="logo logo--white" href="./index.html"
-            ><span class="logo__text-accent">Web</span>Studio</a
-          >
+      <div class="container">
+        <a class="logo logo--white" href="./index.html"
+          ><span class="logo__text-accent">Web</span>Studio</a
+        >
 
-          <ul class="page-header__list">
-            <li class="page-header__item">
-              <a class="page-header__link" href="./index.html">Студия</a>
-            </li>
-            <li class="page-header__item">
-              <a
-                class="page-header__link page-header__link--current"
-                href="./portofolio.html"
-                >Портфолио</a
+        <div class="page-header__wrap">
+          <nav class="page-header__nav">
+            <ul class="page-header__list">
+              <li class="page-header__item">
+                <a
+                  class="page-header__link page-header__link--current"
+                  href="./index.html"
+                  >Студия</a
+                >
+              </li>
+              <li class="page-header__item">
+                <a class="page-header__link" href="./portofolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="page-header__item">
+                <a class="page-header__link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="auth-nav">
+            <li class="auth-nav__item">
+              <a class="auth-nav__link" href="mailto:info@devstudio.com">
+                <svg class="auth-nav__icon" width="16px" height="12px">
+                  <use href="./image/icons.svg#letter"></use>
+                </svg>
+                info@devstudio.com</a
               >
             </li>
-            <li class="page-header__item">
-              <a class="page-header__link" href="">Контакты</a>
+
+            <li class="auth-nav__item">
+              <a class="auth-nav__link" href="tel:+380961111111">
+                <svg class="auth-nav__icon" width="10px" height="16px">
+                  <use href="./image/icons.svg#smartphone"></use>
+                </svg>
+                +38 096 111 11 11</a
+              >
             </li>
           </ul>
-        </nav>
-        <ul class="auth-nav">
-          <li class="auth-nav__item">
-            <a class="auth-nav__link" href="mailto:info@devstudio.com">
-              <svg class="auth-nav__icon" width="16px" height="12px">
-                <use href="./image/icons.svg#letter"></use>
-              </svg>
-              info@devstudio.com</a
-            >
-          </li>
+          <ul class="networks networks__list">
+            <li class="networks__item">
+              <a class="networks__link" href=""></a>
+            </li>
+            <li class="networks__item">
+              <a class="networks__link" href=""></a>
+            </li>
+            <li class="networks__item">
+              <a class="networks__link" href=""></a>
+            </li>
+            <li class="networks__item">
+              <a class="networks__link" href=""></a>
+            </li>
+          </ul>
+          <button class="menu-close-button">
+            <svg width="40" height="40px">
+              <use href="./image/icons.svg#close-menu"></use>
+            </svg>
+          </button>
+        </div>
 
-          <li class="auth-nav__item">
-            <a class="auth-nav__link" href="tel:+380961111111">
-              <svg class="auth-nav__icon" width="10px" height="16px">
-                <use href="./image/icons.svg#smartphone"></use>
-              </svg>
-              +38 096 111 11 11</a
-            >
-          </li>
-        </ul>
+        <button class="menu-open-button">
+          <svg width="40" height="40px">
+            <use href="./image/icons.svg#menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
     <main>
@@ -334,67 +363,70 @@
 
     <footer class="footer section">
       <div class="container footer__wrap">
-        <div>
-          <a class="logo logo--color" href="/index.html"
-            ><span class="logo__text-accent">Web</span>Studio</a
-          >
-          <address>
-            <ul class="footer__list">
-              <li class="footer__item">
-                <a
-                  class="footer__link footer__link--colorHover"
-                  href="https://goo.gl/maps/Yac1yd6HgQ2EfbCq5"
-                  target="_blank"
-                  rel="noreferrer noopener"
-                  >г. Киев, пр-т Леси Украинки, 26</a
-                >
+        <div class="footer__wrapper">
+          <div>
+            <a class="logo logo--color" href="/index.html"
+              ><span class="logo__text-accent">Web</span>Studio</a
+            >
+            <address>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a
+                    class="footer__link footer__link--colorHover"
+                    href="https://goo.gl/maps/Yac1yd6HgQ2EfbCq5"
+                    target="_blank"
+                    rel="noreferrer noopener"
+                    >г. Киев, пр-т Леси Украинки, 26</a
+                  >
+                </li>
+                <li class="footer__item">
+                  <a class="footer__link" href="mailto:info@devstudio.com"
+                    >info@devstudio.com</a
+                  >
+                </li>
+                <li class="footer__item">
+                  <a class="footer__link" href="tel:+380961111111"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+              </ul>
+            </address>
+          </div>
+          <div class="join-box">
+            <b class="join-box__title"> присоединяйтесь</b>
+            <ul class="join-box__list">
+              <li class="join-box__item">
+                <a href="" class="join-box__link">
+                  <svg class="join-box__icon" width="20px" height="20px">
+                    <use href="./image/icons.svg#instagram"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer__item">
-                <a class="footer__link" href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
+              <li class="join-box__item">
+                <a href="" class="join-box__link">
+                  <svg class="join-box__icon" width="20px" height="20px">
+                    <use href="./image/icons.svg#twitter"></use>
+                  </svg>
+                </a>
               </li>
-              <li class="footer__item">
-                <a class="footer__link" href="tel:+380961111111"
-                  >+38 096 111 11 11</a
-                >
+              <li class="join-box__item">
+                <a href="" class="join-box__link">
+                  <svg class="join-box__icon" width="20px" height="20px">
+                    <use href="./image/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="join-box__item">
+                <a href="" class="join-box__link">
+                  <svg class="join-box__icon" width="20px" height="20px">
+                    <use href="./image/icons.svg#linkedin"></use>
+                  </svg>
+                </a>
               </li>
             </ul>
-          </address>
+          </div>
         </div>
-        <div class="join-box">
-          <b class="join-box__title"> присоединяйтесь</b>
-          <ul class="join-box__list">
-            <li class="join-box__item">
-              <a href="" class="join-box__link">
-                <svg class="join-box__icon" width="20px" height="20px">
-                  <use href="./image/icons.svg#instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="join-box__item">
-              <a href="" class="join-box__link">
-                <svg class="join-box__icon" width="20px" height="20px">
-                  <use href="./image/icons.svg#twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="join-box__item">
-              <a href="" class="join-box__link">
-                <svg class="join-box__icon" width="20px" height="20px">
-                  <use href="./image/icons.svg#facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="join-box__item">
-              <a href="" class="join-box__link">
-                <svg class="join-box__icon" width="20px" height="20px">
-                  <use href="./image/icons.svg#linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
-        </div>
+
         <div class="subscription">
           <b class="subscription__title">Подпишитесь на рассылку</b>
           <form class="subscription-form">
